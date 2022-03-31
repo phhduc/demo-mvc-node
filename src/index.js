@@ -1,16 +1,18 @@
 import express from 'express'
 import configViewEngine from './configs/viewEngine'
+require('dotenv').config()
+
+import initWebRoute from './router/web'
+import connection from './configs/connectDB'
 
 const app = express()
+const port = process.env.PORT
 
-const port = 3000
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 configViewEngine(app)
-
-app.get('/', (req, res) =>{
-  res.render('index.ejs')
-})
-
+initWebRoute(app)
 
 app.listen(port, ()=>{
   console.log("running on port " + port)
