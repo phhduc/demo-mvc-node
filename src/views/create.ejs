@@ -24,30 +24,27 @@
         <label>Tên sản phẩm</label>
         <input type="text" name="ten" required="" />
       </div>
-      
+
       <div class="row">
         <label>Mô tả </label>
         <textarea rows="5" cols="60" name="mo_ta" required=""></textarea>
       </div>
-      
+
       <div class="row">
         <label>Giá </label>
         <input type="number" min="0" name="gia" required="" />
       </div>
-      
       <div class="row">
         <label>Ảnh minh họa</label> <br />
-        <img id="review" width="200" height="100%" />
+        <img id="review" width="200" height="200" />
         <input
-        type="file"
-        name="hinh_anh"
-        onchange="imgLoad(event)"
-        required
-        accept="image/*"
-      />
+          type="file"
+          name="hinh_anh"
+          onchange="imgLoad(event)"
+          required
+          accept="image/*"
+        />
       </div>
-     
-      
       <script>
         const imgLoad = (e) => {
           const img = document.getElementById("review");
@@ -55,7 +52,9 @@
         };
       </script>
       <br />
-      <button type="submit">Thêm sản phẩm</button>
+      <div class="btnAdd">
+        <button type="submit">Thêm sản phẩm</button>
+      </div>
     </form>
   </body>
 </html>
