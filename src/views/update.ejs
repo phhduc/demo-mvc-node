@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Demo MVC</title>
+
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<link rel='stylesheet' href='css/bootstrap.min.css'>
+
+</head>
+<body>
+    <div class="top">
+        <a href="/" >Quay lại trang chủ</a>
+    </div>
+    <form action="/updateproduct/<%=product.id%>"
+          enctype="multipart/form-data"
+          method="post" >
+      <label>Tên sản phẩm</label>
+      <input type="text" name="ten" required value=<%=product.ten%> />
+      <br />
+      <label>Mô tả </label>
+      <textarea rows="5" cols="60" name="mo_ta" required="" value=<%=product.mo_ta%> > <%=product.mo_ta %></textarea>
+      <br />
+      <label>Giá </label>
+      <input type="number" min="0" name="gia" required="" value=<%=product.gia%> />
+      <br />
+      <label>Ảnh </label> <br />
+      <img id="review" width="200" height="100%" src=<%=`/${product.hinh_anh}`%> />
+      <input type="file" name="hinh_anh" onchange="imgLoad(event)" accept="image/*" />
+        <script>
+          const imgLoad = e =>{
+           const img = document.getElementById('review')
+            img.src = URL.createObjectURL(e.target.files[0])
+          }
+        </script>
+      <br />
+      <button type="submit">Sửa sản phẩm</button>
+    </form>
+</body>
+</html>
