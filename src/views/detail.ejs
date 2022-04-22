@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Demo MVC</title>
+
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<link rel='stylesheet' href='css/bootstrap.min.css'>
+
+</head>
+<body>
+    <div class="top">
+        <a href="/" >Quay lại trang chủ</a>
+    </div>
+    <img src=<%=`../${product.hinh_anh}` %> />
+    <h1>Tên sản phẩm: <%= product.ten %> </h1>
+    </p>Mô tả: <%=product.mo_ta %> </p>
+    <span>Giá: <%= product.gia %> </span>
+
+</body>
+</html>
