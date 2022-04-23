@@ -10,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.17.9",
+=======
+    "@babel/core": "^7.17.8",
+>>>>>>> d00e6f1fa259c455e7414356c24979f1d9d9fd47
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "body-parser": "^1.19.2",
