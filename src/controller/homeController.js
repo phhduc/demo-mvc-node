@@ -58,9 +58,9 @@ const updateProduct = async (req, res) => {
 const searchProduct= async (req, res) =>{
   try{
     let product = await model.searchProduct(req.query.txtsearch)
-    console.log("san pham ", JSON.stringify(product))
+    console.log("Sản phẩm ", JSON.stringify(product))
     res.render('index.ejs',{product, message:null})
-  }catch(err){res.send("loi me roi")}
+  }catch(err){res.send("Lỗi")}
 }
 export {
   getHomepage,
